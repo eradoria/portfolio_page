@@ -15,7 +15,7 @@
             <ul class="navbar">
                <li> <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i></a></li>
                 <li><a href="./about.html"><i class="fa fa-fw fa-user"></i></a></li>
-               <li> <a href="./gallery.html"><i class="fa fa-fw fa-eye"></i></a></li>
+               <li> <a href="./gallery.html "><i class="fa fa-fw fa-eye"></i></a></li>
             </ul>
 
             <div class="media">
@@ -29,10 +29,52 @@
             <h1> Work
             </h1>
             <p>
-                Check Out some of my projects!
+                Check Out some of my projects! <br> They range from using html, css, and java script. 
+                <br> Various sites for Bussines's, hobbies and even QR-codes.
             </p>
             <!-- <a href="./Erick Doria Hernandez  Resume.pdf" class="button"> Resume</a> -->
+           
         </main>
+
+        <section>
+            <div class="row">
+                <div class="column">
+                  <img src="./images/hair_salon.jpg" alt="Barber Shop Bussiness" onclick="myFunction(this);">
+
+                </div>
+                <div class="column">
+                  <img src="./images/QR-design.jpg" alt="QR-Code Design" onclick="myFunction(this);">
+                </div>
+              </div>
+              
+              <div class="gallery">
+                <!-- Close the image -->
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              
+                <!-- Expanded image -->
+                <img id="expandedImg" style="width:70%">
+              
+                <!-- Image text -->
+                <div id="imgtext"></div>
+              </div>
+
+        </section>
+    </div>
+
+    <script>
+        function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
+    </script>
 
 </body>
 </html>
