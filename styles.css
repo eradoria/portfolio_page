@@ -152,7 +152,6 @@ section p{
     animation-iteration-count: infinite;
     animation-duration: 5s;
     font-size: 150px;
-    
   }
 
   @keyframes spin {
@@ -177,6 +176,10 @@ section p{
         font-size: 30px;
     }
     
+    .media{
+      top: 40px;
+   }
+
     section{
         padding: 0px;
     }
