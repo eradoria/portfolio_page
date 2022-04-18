@@ -129,8 +129,10 @@ main p{
   /* Style the images inside the grid */
   .column img {
     opacity: 0.8;
+    padding: 0px;
     cursor: pointer;
-    width: 200px;
+    width: 150px;
+    height: 200px;
   }
   
   .column img:hover {
