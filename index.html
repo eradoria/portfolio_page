@@ -26,8 +26,9 @@
                 <a href="#" class="fa fa-linkedin"></a>
             </div>
         </nav>
-        
-      <div class="web-container">  
+         
+      <div class="web-container"> 
+         
         <main>
             <h1>Hello, <br> I'm Erick, <br> Web Developer
                 <p>JR Front End Developer</p>
@@ -36,7 +37,18 @@
         </main>
         
         <section>
-                <p id="spinner">  <p>
+            <div id="canvas"></div>
+            <div class="profile">
+                <img src="./myprofilepic.png" alt="">
+                <!-- <div class="scanlines"></div> -->
+            <div class="glow"></div>
+            </div>
+            <div class="cmd">
+                <img src="./images/cmd_dialog.jpeg" alt="">
+            </div>
+            
+
+                <!-- <p id="spinner">  <p> -->
         </section>
       
       </div>
@@ -45,8 +57,39 @@
    
     <script>
 
-        const spinner = document.getElementById('spinner')
-        spinner.innerText='</html>'
+        // const spinner = document.getElementById('spinner')
+        // spinner.innerText='</html>'
+
+        const canvas = document.getElementById('canvas') 
+            const c = canvas.getContext('2d')
+                canvas.width = 240
+                canvas.height = 340
+            const gradient = c.createLinearGradient(0, 0, 150, 300);
+                gradient.addColorStop(0, '#444')
+                gradient.addColorStop(1,'#000')
+                c.fillStyle = gradient
+            c.fillRect(0, 0, canvas.width, canvas.height)
+
+            const drawC = function (radius, maxWidth, minWidth) {
+            const inc = (maxWidth - minWidth) / 5
+            for (let width = maxWidth; width >= minWidth; width -= inc) {
+                c.lineWidth = width
+                if (width > 10) { 
+                c.strokeStyle = 'rgba(50, 50, 255, 0.2)'
+                } else {
+                c.strokeStyle = 'white' 
+                }
+                c.lineCap = 'square'
+                c.beginPath()
+                c.arc(0, 0, radius, 2 * Math.PI * 0.04, 2 * Math.PI * 0.96)
+                c.stroke()
+            }
+            }
+
+            c.translate(120, 170)
+            drawC(70, 30, 10)
+            c.rotate(2 * Math.PI * 0.75)
+            drawC(100, 20, 4)
 
     </script>
 </body>
