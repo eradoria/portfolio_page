@@ -10,6 +10,7 @@ body{
 
 
 .container{
+<<<<<<< HEAD
   /* border: solid red; */
   width: 100%;
   height: 100vh;
@@ -17,6 +18,15 @@ body{
   background-image: url(./images/honeycombs_shapes.jpg);
   background-size: cover;
   
+=======
+    /* border: solid red; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url(./images/honeycombs_shapes.jpg);
+    background-size: cover;
+    
+>>>>>>> ee063097b2e515623190dcfd2e0879fd624082cd
 }
 
 .web-container{
@@ -136,6 +146,7 @@ main p{
 
 /*////////////////////// section */
 section{
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,16 +248,126 @@ background: repeating-linear-gradient(
 );
 
 animation: fudge 7s ease-in-out alternate infinite;
+=======
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px;
+}
+
+.profile img{
+  height: 400px;
+  border-radius: 10px;
+  opacity: 0.9;
+  position: relative;
+  top: 60px;
+  right: 50px;
+  animation: glitch 5s 5s infinite;
+}
+
+.cmd img{
+  height: 400px;
+  width: 500px;
+  opacity: 0.8;
+  position: relative;
+  top: 150px;
+}
+
+.profile::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: -5px 0 magenta;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  animation: noise-1 3s linear infinite alternate-reverse, glitch 3s 5.05s infinite;
+}
+
+.profile::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -5px 0 lightgreen;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  animation: noise-2 3s linear infinite alternate-reverse, glitch 10s 5s infinite;
+}
+
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+@keyframes noise-1 {
+  $steps: 30;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-2 {
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+
+  animation: fudge 7s ease-in-out alternate infinite;
+>>>>>>> ee063097b2e515623190dcfd2e0879fd624082cd
 }
 
 
 @keyframes fudge {
+<<<<<<< HEAD
 from {
   transform: translate(0px, 0px);
 }
 to {
   transform: translate(0px, 2%);
 }
+=======
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+>>>>>>> ee063097b2e515623190dcfd2e0879fd624082cd
 }
 
 
@@ -257,6 +378,7 @@ section p{
 }
 
 /* #spinner {
+<<<<<<< HEAD
   text-align: center;
   animation-name: spin, depth;
   animation-timing-function: linear;
@@ -275,6 +397,27 @@ section p{
   75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
   100% { text-shadow: 0 0 black; }
 } */
+=======
+    text-align: center;
+    animation-name: spin, depth;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    font-size: 150px;
+  }
+
+  @keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-360deg); }
+  }
+  @keyframes depth {
+    0% { text-shadow: 0 0 rgb(10, 10, 10); }
+    25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+    50% { text-shadow: 0 0 black; }
+    75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+    100% { text-shadow: 0 0 black; }
+  } */
+>>>>>>> ee063097b2e515623190dcfd2e0879fd624082cd
 
 /*////////////////////////responsive */
 @media screen and (max-width: 500px){

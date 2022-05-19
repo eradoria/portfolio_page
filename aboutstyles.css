@@ -8,6 +8,7 @@ body{
 }
 
 .container{
+<<<<<<< HEAD
   /* border: solid red; */
   width: 100%;
   height: 100vh;
@@ -15,6 +16,15 @@ body{
   background-image: url(./images/honeycombs_shapes.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+=======
+    /* border: solid red; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url(./images/honeycombs_shapes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+>>>>>>> ee063097b2e515623190dcfd2e0879fd624082cd
 }
 
 .web-container{
@@ -136,9 +146,14 @@ main .header{
 
 
 main h1{
+<<<<<<< HEAD
   color:rgb(23, 223, 179);
   font-size: 100px;
   margin: 15px;
+=======
+    color:rgb(23, 223, 179);
+    font-size: 100px;
+>>>>>>> ee063097b2e515623190dcfd2e0879fd624082cd
 }
 
 main p{
@@ -160,8 +175,13 @@ main p{
     border: solid rgb(30, 145, 120);
     text-decoration: none;
     position: relative;
+<<<<<<< HEAD
     left:0px;
     top: 0px;
+=======
+    top: 10px;
+    right: 30px;
+>>>>>>> ee063097b2e515623190dcfd2e0879fd624082cd
     cursor: pointer;
     padding: 10px;
 }
