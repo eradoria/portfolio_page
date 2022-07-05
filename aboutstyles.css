@@ -5,6 +5,7 @@
 body {
   margin: 0px;
   background-color: rgb(29, 28, 28);
+  max-width: 1000px;
 }
 
 .container {
@@ -112,10 +113,10 @@ main .overlay {
   border-radius: 10px;
   border: solid black;
   background-color: #65819b;
-  height: 400px;
+  height: 800px;
   width: 400px;
   position: relative;
-  top: 350px;
+  top: 380px;
 }
 
 main .header {
@@ -126,7 +127,7 @@ main .header {
   align-items: center;
   justify-content: center;
   position: relative;
-  bottom: 30px;
+  bottom: 50px;
   left: 40px;
   border-radius: 10px;
 }
@@ -154,8 +155,8 @@ main p {
   border: solid rgb(30, 145, 120);
   text-decoration: none;
   position: relative;
-  top: 10px;
-  right: 30px;
+  top: 0px;
+  right: 10px;
   cursor: pointer;
   padding: 10px;
 }
